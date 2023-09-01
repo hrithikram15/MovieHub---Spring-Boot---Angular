@@ -1,0 +1,41 @@
+#header1{
+    border-bottom: 2px solid white;
+    /* display: block;
+    position: fixed;
+    z-index: 1;
+    width: 100%; */
+   
+}
+
+
+
+.space-buttons {
+    flex: 1 1 auto;
+}
+
+.gradient-custom1{
+    background:black;
+}
+
+
+ .gradient-custom {
+
+    /* fallback for old browsers */
+  
+    background:  #241f1e;
+  
+  
+  
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+  
+    /* background: -webkit-linear-gradient(to right, rgba(222, 32, 210, 0.9), rgba(37, 117, 252, 0.9)); */
+  
+  
+  
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    /* background: linear-gradient(to right, rgba(239, 31, 184, 0.9), rgba(37, 117, 252, 0.9)); */
+  
+  }

@@ -1,0 +1,254 @@
+        <!-- <div class="row container d-flex justify-content-center">
+            <div class="col-md-6 col-lg-4">
+            
+                <h1>Update Product</h1>
+            
+              <form #registerForm="ngForm" (ngSubmit)="updateMovie(registerForm)" novalidate>
+            
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>Movie ID</mat-label>
+                  <input matInput ngModel name="movieId" id="movieId" placeholder="MovieId" [value]="movieDetails.movieId"  disabled>
+                  
+              </mat-form-field>
+            
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Movie</mat-label>
+                    <input matInput ngModel name="movieName" id="movieName" placeholder="Movie" [value]="movieDetails.movieName" required>
+                    <mat-error *ngIf="registerForm.controls['movieName'].hasError('required')">Movie is required</mat-error>
+
+                </mat-form-field>
+            
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Cast</mat-label>
+                    <input matInput ngModel name="cast" id="cast" placeholder="Cast" [value]="movieDetails.cast" required>
+                    <mat-error *ngIf="registerForm.controls['cast'].hasError('required')">Cast is required</mat-error>
+
+                </mat-form-field>
+            
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Director</mat-label>
+                    <input matInput ngModel name="director" id="director" placeholder="Director" [value]="movieDetails.director" required>
+                    <mat-error *ngIf="registerForm.controls['director'].hasError('required')">Director is required</mat-error>
+
+                </mat-form-field>
+            
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Production</mat-label>
+                    <input matInput ngModel name="production" id="production" placeholder="Production" [value]="movieDetails.production" required>
+                    <mat-error *ngIf="registerForm.controls['production'].hasError('required')">Production is required</mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Genre</mat-label>
+                    <input matInput ngModel name="genre" id="genre" placeholder="Genre" [value]="movieDetails.genre" required>
+                    <mat-error *ngIf="registerForm.controls['genre'].hasError('required')">Genre is required</mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Rating</mat-label>
+                    <input matInput ngModel name="rating" id="rating" placeholder="Rating" [value]="movieDetails.rating" required>
+                    <mat-error *ngIf="registerForm.controls['rating'].hasError('required')">Rating is required</mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Plot</mat-label>
+                    <input matInput ngModel name="plot" id="plot" placeholder="Plot" [value]="movieDetails.plot" required>
+                    <mat-error *ngIf="registerForm.controls['plot'].hasError('required')">Plot is required</mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Release Date</mat-label>
+                    <input matInput ngModel name="yor" id="yor" placeholder="Release Date" [value]="movieDetails.yor" required>
+                    <mat-error *ngIf="registerForm.controls['yor'].hasError('required')">Release Date is required</mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Budget</mat-label>
+                    <input matInput ngModel name="budget" id="budget" placeholder="Budget" [value]="movieDetails.budget" required>
+                    <mat-error *ngIf="registerForm.controls['budget'].hasError('required')">Budget is required</mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Box Office</mat-label>
+                    <input matInput ngModel name="boCollection" id="boCollection" placeholder="BO Collection" [value]="movieDetails.boCollection" required>
+                    <mat-error *ngIf="registerForm.controls['boCollection'].hasError('required')">BO Collection is required</mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Language</mat-label>
+                    <input matInput ngModel name="language" id="language" placeholder="Language" [value]="movieDetails.language" required>
+                    <mat-error *ngIf="registerForm.controls['language'].hasError('required')">Language is required</mat-error>
+
+                </mat-form-field>
+            
+            
+                
+            
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>Image Link</mat-label>
+                  <input type="text" matInput ngModel name="imageURL" id="imageURL" placeholder="Image URL" [value]="movieDetails.imageURL" required>
+                  <mat-error *ngIf="registerForm.controls['imageURL'].hasError('required')">Image URL is required</mat-error>
+
+              </mat-form-field>
+            
+                <div class="text-center">
+                    <button type="submit" mat-raised-button color="primary" [disabled]="!registerForm.valid">Update Movie</button>
+                </div>
+            </form>
+                      </div>
+                       </div>
+                       
+             -->
+
+             <section class="h-100 bg-dark">
+                <div class="container py-5 h-100">
+                  <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col">
+                      <div class="card card-registration my-4">
+                        <div class="row g-0">
+                          <div class="col-xl-6 d-none d-xl-block">
+                            <!-- <img src="https://teeholly.com/wp-content/uploads/2021/12/red-halloween-the-batman-2022-movie_1640638072-scaled.jpg"
+                              alt="Sample photo" class="img-fluid"
+                              style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" /> -->
+
+                              <img src="{{movieDetails.imageURL}}"
+                              alt="Sample photo" class="img-fluid"
+                              style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                          </div>
+                          
+                          <div class="col-xl-6">
+                            <form #registerForm="ngForm" (ngSubmit)="updateMovie(registerForm)" novalidate>
+                            <div class="card-body p-md-5 text-black">
+                              <h3 class="mb-5 text-uppercase">Update Movie</h3>
+              
+                              <div class="row">
+                                <!-- <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Movie ID</mat-label>
+                                        <input matInput ngModel name="movieId" id="movieId" placeholder="Movie ID"  disabled>
+                                        
+                                    </mat-form-field>
+                                </div> -->
+                                <div class="col-md-12 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Movie Name</mat-label>
+                                        <input matInput ngModel name="movieName" id="movieName" placeholder="Movie Name" [value]="movieDetails.movieName" required>
+                                
+                                        
+                                    </mat-form-field>
+                                </div>
+                              </div>
+              
+                              <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Cast</mat-label>
+                                        <input matInput ngModel name="cast" id="cast" placeholder="Cast" [value]="movieDetails.cast" required>
+                                
+                                        
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Director</mat-label>
+                                        <input matInput ngModel name="director" id="director" placeholder="Director" [value]="movieDetails.director" required>
+                                
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Production</mat-label>
+                                        <input matInput ngModel name="production" id="producton" placeholder="Production" [value]="movieDetails.production" required>
+                                
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Genre</mat-label>
+                                        <input matInput ngModel name="genre" id="genre" placeholder="Genre" [value]="movieDetails.genre" required>
+                                
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Budget</mat-label>
+                                        <input matInput ngModel name="budget" id="budget" placeholder="Budget" [value]="movieDetails.budget" required>
+                                
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>BO Collection</mat-label>
+                                        <input matInput ngModel name="boCollection" id="boCollection" placeholder="BO Collection" [value]="movieDetails.boCollection" required>
+                                
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Release Date</mat-label>
+                                        <input matInput ngModel name="yor" id="yor" placeholder="Release Date" [value]="movieDetails.yor" required>
+                                
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Language</mat-label>
+                                        <input matInput ngModel name="language" id="language" placeholder="Language" [value]="movieDetails.language" required>
+                                
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Plot</mat-label>
+                                        <input type="text" matInput ngModel name="plot" id="plot" placeholder="Plot" [value]="movieDetails.plot" required>
+                                
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Rating</mat-label>
+                                        <input type="number" matInput ngModel name="rating" id="rating" placeholder="Rating" [value]="movieDetails.rating" required>
+                                
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-12 mb-4">
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-label>Image Link</mat-label>
+                                        <input type="text" matInput ngModel name="imageURL" id="imageURL" placeholder="Image URL" [value]="movieDetails.imageURL" required>
+                                  
+                                    </mat-form-field>
+                                </div>
+                              </div>
+              
+                              <!-- <div class="form-outline mb-4">
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <mat-label>Image Link</mat-label>
+                                    <input type="text" matInput ngModel name="imageURL" id="imageURL" placeholder="Image URL" required>
+                                    <mat-error *ngIf="registerForm.controls['imageURL'].hasError('required')">Image URL is required</mat-error>
+                              
+                                </mat-form-field>
+                              </div> -->
+              
+                              <div class="d-flex justify-content-end pt-3">
+                                <!-- <button type="button" class="btn btn-light btn-lg">Reset all</button> -->
+                                <button type="submit"  class="btn btn-warning btn-lg ms-2" [disabled]="!registerForm.valid">Update Movie</button>
+                              </div>
+              
+                            </div>
+                        </form>
+                        </div>
+                        </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                
+              </section>

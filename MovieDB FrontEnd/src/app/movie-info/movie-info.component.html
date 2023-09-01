@@ -1,0 +1,86 @@
+<div class="product-image">
+    <img  />
+    </div>
+    <!-- <p>{{productDetail.productName}}</p> -->
+    <main class="container">
+      <!-- Left Column / Headphones Image -->
+      <div class="left-column">
+        <img data-image="black" [src]="movieDetails.imageURL" alt="Product Image">
+      </div>
+      <!-- Right Column -->
+      <div class="right-column">
+        <!-- Product Description -->
+        <div class="product-description">
+          <!-- <span>{{productDetail.productName}}</span> -->
+          <h1>{{movieDetails.movieName}}</h1>
+          <h2>{{movieDetails.cast}} </h2>
+          <p>{{movieDetails.plot}}</p>
+        </div>
+        <!-- Product Configuration -->
+        <div class="product-configuration">
+          <!-- Product Color -->
+          <!-- <div class="product-color">
+            <span>Color</span>
+            <div class="color-choose">
+              <div>
+                <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+                <label for="red"><span></span></label>
+              </div>
+              <div>
+                <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                <label for="blue"><span></span></label>
+              </div>
+              <div>
+                <input data-image="black" type="radio" id="black" name="color" value="black">
+                <label for="black"><span></span></label>
+              </div>
+            </div>
+          </div>
+      -->
+          <!-- Cable Configuration -->
+          <!-- <div class="cable-config">
+            <span>Cable configuration</span>
+            <div class="cable-choose">
+              <button>Straight</button>
+              <button>Coiled</button>
+              <button>Long-coiled</button>
+            </div>
+            <a href="#">How to configurate your headphones</a>
+          </div> -->
+        </div>
+        <!-- Product Pricing -->
+        <!-- <div class="product-price">
+          <span style="text-decoration: line-through;">₹{{productDetails.productActualPrice}}</span>
+          <span>₹{{productDetails.productDiscountedPrice}}</span> 
+            <br>
+          <a href="#" class="cart-btn" (click)="addToCart(productDetails.productId)">Add to cart</a>
+        </div> -->
+        <span style="font-family: 'Teko', sans-serif;">{{movieDetails.genre}} </span>
+        <span> | </span>
+        <span style="font-family: 'Teko', sans-serif;">{{movieDetails.yor}} </span><br> <hr>
+
+        <p style="font-family: 'Teko', sans-serif;">MovieHub Rating: <b>{{movieDetails.rating}} Stars/10</b></p>
+
+            <p style="font-family: 'Teko', sans-serif;">Cast: <b>{{movieDetails.cast}} </b></p>
+            <p style="font-family: 'Teko', sans-serif;">Director: <b>{{movieDetails.director}} </b></p>
+            <p style="font-family: 'Teko', sans-serif;">Producer: <b>{{movieDetails.production}} </b></p>
+            <p style="font-family: 'Teko', sans-serif;">Language: <b>{{movieDetails.language}} </b></p>
+            <p style="font-family: 'Teko', sans-serif;" >Release: <b>{{movieDetails.yor}} </b></p>
+            <p style="font-family: 'Teko', sans-serif;">Budget: <b>{{movieDetails.budget}} </b></p>
+            <p style="font-family: 'Teko', sans-serif;">BO Collection: <b>{{movieDetails.boCollection}} </b></p>
+        
+
+        <!-- <a class="cart-btn" (click)="addToCart(movieDetails.movieId)">Add to cart</a> -->
+        <a style="margin-bottom: 10px; background-color: yellow; color: black;"  class="cart-btn" (click)="addToWatchlist(movieDetails.movieId)">Add to Watchlist</a> <br>
+        <!-- <a  class="cart-btn" (click)="addToWatchList(movieDetails.movieId)">Add Review</a> <br> <br>
+        <a  class="cart-btn" (click)="addToWatchList(movieDetails.movieId)">See Reviews</a>  -->
+        <span><a style="margin-bottom: 10px;" class="cart-btn" (click)="addReview(movieDetails.movieId)">Add Review</a>
+        </span>
+
+          <a style="margin-left: 20px;"  class="cart-btn" (click)="showAllReviews(movieDetails.movieId)">Show All Reviews</a>
+          <br>
+          <mat-error><b> {{errMsg}} </b> </mat-error>
+
+
+      </div>
+    </main>

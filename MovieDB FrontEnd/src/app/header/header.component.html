@@ -1,0 +1,42 @@
+<!-- <mat-toolbar color="accent">
+  <span>InstaSell</span>
+  <span class="space-buttons"></span>
+  <button *ngIf="! isLoggedIn()" routerLink="/login" mat-raised-button color="accent">Login</button>
+  <button *ngIf="isLoggedIn()" (click)="logout()" mat-raised-button color="warn">Logout</button>
+</mat-toolbar>
+
+<mat-toolbar color="primary" *ngIf="isLoggedIn()">
+  <button mat-raised-button color="primary" routerLink="/">Home</button>
+  <button *ngIf="!isAdmin()" mat-raised-button color="primary" routerLink="/cart">Cart</button>
+  <button *ngIf="!isAdmin()" mat-raised-button color="primary" routerLink="/myOrders">My Orders</button>
+  <button *ngIf="isAdmin()" mat-raised-button color="primary" routerLink="/addNewProduct">Add New Product</button>
+  <button *ngIf="isAdmin()" mat-raised-button color="primary" routerLink="/showProductDetailes">Show All Products</button>
+
+  <button *ngIf="isAdmin()" mat-raised-button color="primary" routerLink="/orderInformation">Orders</button>
+</mat-toolbar>
+ -->
+
+ <div id="header1">
+
+ <mat-toolbar class="gradient-custom" color="accent">
+    <span> <h1 style="font-family: 'Satisfy', cursive; color: yellow;" routerLink="/"> MovieHub</h1></span>
+    <span class="space-buttons"></span>
+    <button  routerLink="/login" mat-raised-button color="primary" *ngIf="flag2">{{ currentUser.username }}</button>
+
+    <button style="margin: 15px;"  routerLink="/login" mat-raised-button color="primary" *ngIf="!flag2">Login</button>
+    <button style="margin: 15px;" (click)="logout()" mat-raised-button color="warn">Logout</button>
+  </mat-toolbar>
+  
+  <mat-toolbar class="gradient-custom" color="primary" >
+    <button  style="margin: 15px; font-family: 'Satisfy', cursive;" class="gradient-custom1" mat-raised-button  routerLink="/">Home</button>
+    
+    <button style="margin: 15px; font-family: 'Satisfy', cursive;" class="gradient-custom1"  mat-raised-button  routerLink="/watchlist"  *ngIf="!flag3">Watchlist</button>
+    <button style="margin: 15px; font-family: 'Satisfy', cursive;" class="gradient-custom1" mat-raised-button  routerLink="/myReviews"   *ngIf="!flag3">My Reviews</button>
+    <button style="margin: 15px; font-family: 'Satisfy', cursive;" class="gradient-custom1" mat-raised-button  routerLink="/addMovie" *ngIf="flag3">Add New Movie</button>
+    <button style="margin: 15px; font-family: 'Satisfy', cursive;" class="gradient-custom1" mat-raised-button  routerLink="/showMovies"  *ngIf="flag3">Show All Movies</button>
+    <button style="margin: 15px; margin-right: 450px; font-family: 'Satisfy', cursive;" class="gradient-custom1" mat-raised-button  routerLink="/topRatedMovies">Top Rated </button>
+
+    <input class="form-control mr-sm-2" style="width: 160px;" [(ngModel)] = "pattern" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" (click)="searchMovie()" style="margin-left: 15px;" type="submit">Search</button>
+  </mat-toolbar>
+  </div>
